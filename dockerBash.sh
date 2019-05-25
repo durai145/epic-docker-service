@@ -1,1 +1,1 @@
-sudo docker exec -it 0ea9ee9bd5bd  /bin/bash
+sudo docker exec -it $1  /bin/bash
