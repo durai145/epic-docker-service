@@ -153,23 +153,21 @@ createEpicService(userHome, user, function(err, message) {
 });
 */
 
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
-const { execSync } = require('child_process');
-
+var cp = require('child_process');
 enableService = function(callback) {
   command = "systemctl enable epic.service";
-  const { stdout, stderr } = execSync(command);
+  cp.exec(command, function(error, stdout, stderr) {
   console.log('stdout:', stdout);
   callback(stderr, stdout);
+  });
 }
 
 startService = function(callback) {
   command = "systemctl start epic.service";
-  const { stdout, stderr } = execSync(command);
+  cp.exec(command, function(error, stdout, stderr) {
   console.log('stdout:', stdout);
   callback(stderr, stdout);
-
+  });
 }
 
 
