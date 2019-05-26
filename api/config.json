@@ -1,0 +1,17 @@
+{
+    "host": "localhost",
+    "port": "3000",
+    "createEpicConfigRequest": {
+        "userHome": "/app/",
+        "rpcUser": "root",
+        "rpcPassword": "1212121212",
+        "ip": "localhost",
+        "key": "112121212kjsfkjbasdfajdsbsdvk",
+        "port": "1244"
+    },
+    "epicServiceRequest": {
+        "userHome": "/app/",
+        "user": "root"
+    }
+
+}
