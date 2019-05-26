@@ -23,10 +23,11 @@ RUN npm install
 RUN apt-get install -y vim
 
 RUN apt install dbus-user-session -y
-RUN systemctl restart dbus
 RUN mkdir -p /run/dbus
 RUN dbus-daemon --system
-
-EXPOSE "3000" "1255"
+RUN systemctl restart dbus
+RUN apt install net-tools -y
+EXPOSE 3000
+EXPOSE 1255
 ENTRYPOINT ["nodejs"]
 CMD ["app.js", "3000"]
